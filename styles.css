@@ -45,7 +45,7 @@ h2 {
 }
 
 p {
-    font-size: 0.875rem;
+    font-size: 0.89rem;
     color: var(--dark-grayish-blue);
     line-height: 1.9;
 }
@@ -53,41 +53,40 @@ p {
 .image-container {
     background-image: url(images/image-product-desktop.jpg);
     background-size: cover;
-    border-radius: 0.625rem 0.625rem 0 0;
 }
 
 .content-container {
     background-color: white;
-    padding: 2rem;
-    border-radius: 0 0 0.625rem 0.625rem;
+    padding: 2rem 3rem 2.2rem 2rem;
 }
 
 .card {
-    width: 37.5rem;
-    height: 28rem;
+    max-width: 40rem;
+    min-height: 20rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     border-radius: 0.625rem;
+    overflow: hidden;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 680px) {
     .image-container {
         background-image: url(images/image-product-mobile.jpg);
-        background-size: cover;
-        background-position: right;
+        background-size: contain;
+        background-position: bottom;
+        background-repeat: no-repeat;
         width: auto;
-        height: 20rem;
-        
     }
 
     .card {
         display: grid;
-        width: 90%;
+        max-width: 90%;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
         border-radius: 100px;
         border-radius: 0.625rem;
+        overflow: hidden;
     }
 }
 
@@ -97,12 +96,14 @@ p {
     font-size: 2rem;
     font-weight: var(--font-heavy-weight);
     margin-right: 15px;
+    margin-block: 0 15px;
 }
 
 #previous-price {
     font-family: var(--font-family-montserrat);
     text-decoration-line: line-through;
     font-size: 0.8125rem;
+    margin-block: 0 15px;
 }
 
 .price-container {
